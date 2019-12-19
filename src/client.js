@@ -1,7 +1,8 @@
-const { axios } = require("../fakeBackend/mock");
+//const { axios } = require("./fakeBackend/mock");
 
+import axios from 'axios';
 const getFeedbackByProductViewData = async (product, actualize = false) => {
-  let feedback;
+
   await axios.get('/feedback', {
     params: {
       product: product
@@ -9,11 +10,11 @@ const getFeedbackByProductViewData = async (product, actualize = false) => {
   })
     .then((response) => {
       console.log(response);
-      feedback = response.data;
+
     }, (error) => {
       console.log(error);
     });
-  return feedback;
+
 
 
 };

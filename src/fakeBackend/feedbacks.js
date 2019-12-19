@@ -1,5 +1,5 @@
-const {createGuid} = require('../utils/guid')
-const {users} = require('./users')
+const { createGuid } = require('../utils/guid')
+const { users } = require('./users')
 
 const feedback = {
   extern: [
@@ -178,4 +178,4 @@ const feedback = {
   ],
 }
 
-module.exports = {feedback}
+module.exports = { feedback }

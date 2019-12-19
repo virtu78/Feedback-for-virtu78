@@ -1,6 +1,7 @@
+const axios = require("axios");
 const { parse } = require("url");
 const MockAdapter = require("axios-mock-adapter");
-const axios = require("axios");
+
 const { users } = require("./users");
 const { feedback } = require("./feedbacks");
 
