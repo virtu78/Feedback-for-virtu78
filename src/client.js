@@ -2,20 +2,23 @@
 
 import axios from 'axios';
 const getFeedbackByProductViewData = async (product, actualize = false) => {
+let feedback;
 
-  await axios.get('/feedback', {
+  await axios.get('/api/feedback', {
     params: {
       product: product
     }
   })
-    .then((response) => {
+    .then(response => {
       console.log(response);
+feedback=response.data;
 
-    }, (error) => {
+    }).catch (error => {
       console.log(error);
     });
 
-
+return feedback;
 
 };
 export default getFeedbackByProductViewData;
+//module.exports = { getFeedbackByProductViewData };
